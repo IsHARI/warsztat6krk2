@@ -17,7 +17,7 @@ public class User {
     private Long id;
     @NotEmpty
     private String username;
-    @Size(min = 8)
+    @NotEmpty
     private String password;
     private boolean enabled;
     @Email
@@ -71,5 +71,9 @@ public class User {
         this.username = username;
         this.password = password;
         this.email = email;
+    }
+
+    public boolean isPasswordCorrect(String password) {
+        return BCrypt.checkpw(password, this.password);
     }
 }
