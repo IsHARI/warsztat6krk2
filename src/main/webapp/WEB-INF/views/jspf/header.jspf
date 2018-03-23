@@ -1,0 +1,6 @@
+<%@ page contentType="text/html;charset=UTF-8" %>
+<p class='twitter-highlight'>Twitter App</p>
+<p class="main-menu">
+    <a href="${pageContext.servletContext.contextPath}/user/login">Login</a>
+    <a href="${pageContext.servletContext.contextPath}/user/register">Register</a>
+</p>
